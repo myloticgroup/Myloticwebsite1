@@ -1,13 +1,13 @@
+import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <>
-      {/* Other sections will go here */}
       <main style={{ flex: 1 }}>
-        {/* Page content */}
+        <Contact />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
