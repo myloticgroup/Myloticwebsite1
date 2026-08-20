@@ -79,11 +79,11 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   transition: border-color var(--transition-base), transform var(--transition-fast);
-}
 
-.contact-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
-  transform: translateY(-2px);
+  &:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+  }
 }
 
 .contact-card__icon {
@@ -117,8 +117,10 @@
   transition: color var(--transition-base);
 }
 
-a.contact-card__value:hover {
-  color: var(--color-accent-blue);
+a.contact-card__value {
+  &:hover {
+    color: var(--color-accent-blue);
+  }
 }
 
 .contact-card__subtext {
@@ -188,16 +190,20 @@ a.contact-card__value:hover {
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.contact-form__input::placeholder,
-.contact-form__textarea::placeholder {
-  color: var(--color-text-dim);
+.contact-form__input,
+.contact-form__textarea {
+  &::placeholder {
+    color: var(--color-text-dim);
+  }
 }
 
-.contact-form__input:focus,
-.contact-form__select:focus,
-.contact-form__textarea:focus {
-  border-color: var(--color-accent-blue);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+  &:focus {
+    border-color: var(--color-accent-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  }
 }
 
 .contact-form__select {
@@ -235,18 +241,20 @@ a.contact-card__value:hover {
   margin-top: var(--spacing-sm);
 }
 
-.contact-form__submit-btn:hover {
-  background-color: var(--color-accent-blue-hover);
-  transform: translateY(-1px);
-}
+.contact-form__submit-btn {
+  &:hover {
+    background-color: var(--color-accent-blue-hover);
+    transform: translateY(-1px);
+  }
 
-.contact-form__submit-btn:active {
-  transform: translateY(0);
-}
+  &:active {
+    transform: translateY(0);
+  }
 
-.contact-form__submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
 }
 
 .contact-form__success {
@@ -291,8 +299,10 @@ a.contact-card__value:hover {
   transition: background-color var(--transition-base);
 }
 
-.contact-form__reset-btn:hover {
-  background-color: var(--color-bg-card);
+.contact-form__reset-btn {
+  &:hover {
+    background-color: var(--color-bg-card);
+  }
 }
 
 @media (max-width: 992px) {

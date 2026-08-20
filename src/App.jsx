@@ -1,15 +1,8 @@
-import Contact from './pages/contact/Contact';
-import Footer from './components/footer/Footer';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes/routes';
 
 function App() {
-  return (
-    <>
-      <main style={{ flex: 1 }}>
-        <Contact />
-      </main>
-      {/* <Footer /> */}
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
