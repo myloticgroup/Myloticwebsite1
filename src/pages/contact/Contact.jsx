@@ -3,7 +3,7 @@ import './contact.scss';
 
 function MailIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="2" y="4" width="20" height="16" rx="2" />
       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
@@ -12,7 +12,7 @@ function MailIcon() {
 
 function PhoneIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
     </svg>
   );
@@ -20,7 +20,7 @@ function PhoneIcon() {
 
 function LocationIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
       <circle cx="12" cy="10" r="3" />
     </svg>
@@ -29,7 +29,7 @@ function LocationIcon() {
 
 function ClockIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
     </svg>
@@ -38,7 +38,7 @@ function ClockIcon() {
 
 function SendIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
       <line x1="22" y1="2" x2="11" y2="13" />
       <polygon points="22 2 15 22 11 13 2 9 22 2" />
     </svg>
@@ -47,7 +47,7 @@ function SendIcon() {
 
 function CheckCircleIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
       <polyline points="22 4 12 14.01 9 11.01" />
     </svg>
@@ -67,33 +67,34 @@ const CONTACT_DETAILS = [
     id: 'phone',
     icon: PhoneIcon,
     title: 'Call Us',
-    value: '+1 (555) 486-7980',
-    link: 'tel:+15554867980',
-    subtext: 'Mon - Fri from 8:00 AM to 6:00 PM EST.'
+    value: '+91 9896484992',
+    link: 'tel:+919896484992',
+    subtext: 'Mon - Fri from 8:00 AM to 6:00 PM.'
   },
   {
     id: 'location',
     icon: LocationIcon,
-    title: 'Visit Our HQ',
-    value: '125 Innovation Drive, Suite 100, New York, NY 10025 USA',
-    link: 'https://maps.google.com',
-    subtext: 'Get directions to our global headquarters.'
+    title: 'Location',
+    value: 'India',
+    subtext: 'Serving clients globally with top talent & solutions.'
   },
   {
     id: 'hours',
     icon: ClockIcon,
     title: 'Business Hours',
     value: 'Monday – Friday: 8am – 6pm',
-    subtext: 'Weekend support available for enterprise SLAs.'
+    subtext: '24/7 enterprise SLA support available.'
   }
 ];
 
 const SERVICES_OPTIONS = [
+  'AI Solution & Automation',
+  'Staff Augmentation',
+  'Web & App Development',
+  'GCC Global Capability Centers',
   'Digital Transformation',
-  'IT Consulting',
-  'Software Development',
-  'Cloud Solutions',
-  'Data & Analytics',
+  'EdTech / E-Learning',
+  'Managed Services',
   'Other Services'
 ];
 
@@ -136,7 +137,7 @@ export default function Contact() {
       <div className="contact-container">
         <div className="contact-hero">
           <span className="contact-badge">GET IN TOUCH</span>
-          <h1 className="contact-title">Let's Build Something Great Together</h1>
+          <h1 className="contact-title">Let's Build Something <span>Great Together</span></h1>
           <p className="contact-subtitle">
             Have a project in mind or want to learn how Mylotic Group can transform your enterprise? 
             Reach out to our team of experts today.
@@ -232,7 +233,7 @@ export default function Contact() {
                         type="tel"
                         id="phone"
                         name="phone"
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+91 9896484992"
                         value={formData.phone}
                         onChange={handleChange}
                         className="contact-form__input"
