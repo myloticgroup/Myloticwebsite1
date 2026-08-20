@@ -34,7 +34,8 @@ function Home() {
               <div className="hero-grid" /><div className="hero-orb hero-orb-one" /><div className="hero-orb hero-orb-two" />
               <div className="hero-ring hero-ring-one" /><div className="hero-ring hero-ring-two" />
               <div className="hero-cube hero-cube-one" /><div className="hero-cube hero-cube-two" /><div className="hero-cube hero-cube-three" />
-              <div className="hero-core"><FaRocket /><strong>Ideas in motion</strong><small>Technology / Talent / Growth</small></div>
+              <div className="hero-rocket-orbit"><div className="rocket"><FaRocket /></div></div>
+              <div className="hero-core"><strong>Ideas in motion</strong><small>Technology / Talent / Growth</small></div>
               <div className="floating-card floating-card-top"><FaChartLine /><span><b>Growth engine</b><small>+42% efficiency</small></span></div>
               <div className="floating-card floating-card-bottom"><span className="pulse" /><span><b>Connected globally</b><small>Always moving forward</small></span></div>
             </div>
