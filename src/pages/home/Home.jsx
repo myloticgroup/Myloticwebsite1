@@ -1,5 +1,6 @@
 import './home.scss';
 import { Link } from 'react-router-dom';
+import ServiceSection from '../../sections/services/Service';
 import {
   FaArrowRight,
   FaBullseye,
@@ -69,18 +70,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="services section" id="services">
-        <div className="container"><div className="section-heading"><span className="eyebrow">WHAT WE DO</span><h2>Solutions Built for Modern Businesses</h2><p>From intelligent automation to digital transformation, we help organizations solve complex business challenges with technology.</p></div>
-          <div className="service-container">
-            <Link className="service-card" to="/services"><span className="service-icon"><FaRocket /></span><h3>AI Solutions &amp; Automation</h3><p>Turn repetitive work into intelligent, measurable business advantage.</p><FaArrowRight /></Link>
-            <Link className="service-card" to="/services"><span className="service-icon"><FaPeopleGroup /></span><h3>Staff Augmentation</h3><p>Extend your team with skilled specialists aligned to your goals.</p><FaArrowRight /></Link>
-            <Link className="service-card" to="/services"><span className="service-icon"><FaCode /></span><h3>Web &amp; App Development</h3><p>Build reliable digital products that customers love to use.</p><FaArrowRight /></Link>
-            <Link className="service-card" to="/services"><span className="service-icon"><FaGlobe /></span><h3>GCC Enablement</h3><p>Establish and scale global capability centers with confidence.</p><FaArrowRight /></Link>
-            <Link className="service-card" to="/services"><span className="service-icon"><FaChartLine /></span><h3>Digital Transformation</h3><p>Modernize operations with strategy, data, and purposeful technology.</p><FaArrowRight /></Link>
-            <Link className="service-card" to="/services"><span className="service-icon"><FaLayerGroup /></span><h3>EdTech / E-Learning</h3><p>Create engaging learning experiences for the next generation.</p><FaArrowRight /></Link>
-          </div>
-        </div>
-      </section>
+      <ServiceSection />
 
       <section className="business section"><div className="container business-container"><div className="business-left"><span className="eyebrow">BUILT FOR MOMENTUM</span><h2>Technology That Moves Your Business Forward</h2><p>We combine technology, automation, and human expertise to turn complex challenges into clear, scalable progress.</p><Link className="button" to="/services">Explore Our Services <FaArrowRight /></Link></div><div className="business-right">
         <div className="business-card"><FaRocket /><div><h3>AI Solution &amp; Automation</h3><p>Make every process more intelligent.</p></div></div>

@@ -1,5 +1,6 @@
 import "./navbar.scss";
 import { Link, NavLink } from "react-router-dom";
+import { FaChevronDown } from "react-icons/fa6";
 
 function Navbar() {
   return (
@@ -32,21 +33,18 @@ function Navbar() {
           <div className="navbar__dropdown">
             <NavLink to="/services" className={({ isActive }) => `navbar__link${isActive ? " navbar__link--active" : ""}`}>
               Services
-              <span className="navbar__arrow">⌄</span>
+              <FaChevronDown className="navbar__arrow" />
             </NavLink>
 
             <div className="navbar__dropdown-menu">
-              <Link to="/services/ai-automation">
-                AI Solution & Automation
-              </Link>
-
-              <Link to="/services/web-development">
-                Web & App Development
-              </Link>
-
-              <Link to="/services/staff-augmentation">
-                Staff Augmentation
-              </Link>
+              <Link to="/services">AI Solution</Link>
+              <Link to="/services">Mobile App Development</Link>
+              <Link to="/services">GCC Global Capability Centre</Link>
+              <Link to="/services">HR Services</Link>
+              <Link to="/services">AI Solutions &amp; Automation</Link>
+              <Link to="/services">Edtech</Link>
+              <Link to="/services">Digital Marketing</Link>
+              <Link to="/services">IT Consulting</Link>
             </div>
           </div>
 
