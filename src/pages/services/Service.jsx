@@ -12,7 +12,6 @@ import './service.css';
 export default function Service() {
   return (
     <div className="services-page">
-      {/* Hero Banner */}
       <section className="services-hero">
         <div className="container hero-container">
           <span className="eyebrow">OUR CAPABILITIES</span>
@@ -31,12 +30,10 @@ export default function Service() {
         </div>
       </section>
 
-      {/* Main Sliding Window Services Section */}
       <div id="services-carousel">
         <ServiceSection />
       </div>
 
-      {/* Value Pillars Section */}
       <section className="services-values section">
         <div className="container">
           <div className="section-heading">
@@ -73,7 +70,6 @@ export default function Service() {
         </div>
       </section>
 
-      {/* Page Call to Action */}
       <section className="services-cta">
         <div className="container cta-container">
           <span className="eyebrow">GET STARTED TODAY</span>

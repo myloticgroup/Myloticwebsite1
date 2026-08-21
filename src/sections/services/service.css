@@ -44,13 +44,11 @@
   line-height: 1.7;
 }
 
-/* Slider Outer Wrapper */
 .services-slider-container {
   position: relative;
   margin-top: 10px;
 }
 
-/* Controls Top Bar */
 .slider-controls-top {
   display: flex;
   align-items: center;
@@ -115,7 +113,6 @@
   color: #0b1f3a;
 }
 
-/* Slider Controls Buttons */
 .slider-buttons {
   display: flex;
   align-items: center;
@@ -151,7 +148,6 @@
   transform: translateY(0);
 }
 
-/* Viewport and Track */
 .slider-viewport {
   overflow: hidden;
   border-radius: 16px;
@@ -174,7 +170,6 @@
   box-sizing: border-box;
 }
 
-/* Service Card Inner */
 .service-card-inner {
   display: flex;
   flex-direction: column;
@@ -316,7 +311,6 @@
   background: #008fe5;
 }
 
-/* Pagination Dots */
 .slider-dots {
   display: flex;
   align-items: center;
@@ -346,7 +340,6 @@
   background: #94a3b8;
 }
 
-/* Service Detail Modal */
 .service-modal-overlay {
   position: fixed;
   inset: 0;
@@ -492,7 +485,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Rules */
 @media (max-width: 1024px) {
   .services-section h2 {
     font-size: 2.5rem;

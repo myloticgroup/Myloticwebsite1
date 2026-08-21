@@ -13,7 +13,6 @@
   overflow: hidden;
   margin-top: auto;
 
-  /* Glowing Accent Top Line */
   &::before {
     content: '';
     position: absolute;
@@ -40,7 +39,6 @@
   }
 }
 
-/* Brand Column */
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -167,7 +165,6 @@
   }
 }
 
-/* Footer Link Columns */
 .footer-column {
   &__title {
     position: relative;
@@ -237,7 +234,6 @@
   }
 }
 
-/* Contact Column */
 .footer-contact {
   &__list {
     display: flex;
@@ -311,7 +307,6 @@
   }
 }
 
-/* Bottom Bar & Divider */
 .footer__divider {
   border: none;
   height: 1px;
@@ -359,7 +354,6 @@
   }
 }
 
-/* Responsive Breakdown */
 @media (max-width: 1120px) {
   .footer__grid {
     grid-template-columns: 1fr 1fr 1fr;

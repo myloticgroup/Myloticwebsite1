@@ -149,37 +149,32 @@ const SERVICES_DATA = [
   },
 ];
 
+function getVisibleCards() {
+  if (window.innerWidth < 768) return 1;
+  if (window.innerWidth < 1024) return 2;
+  return 3;
+}
+
 export default function Service() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(3);
+  const [visibleCards, setVisibleCards] = useState(getVisibleCards);
   const [isPaused, setIsPaused] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   
-  // Touch swipe support
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  // Responsive card count calculation
   const updateVisibleCards = useCallback(() => {
-    const width = window.innerWidth;
-    if (width < 768) {
-      setVisibleCards(1);
-    } else if (width < 1024) {
-      setVisibleCards(2);
-    } else {
-      setVisibleCards(3);
-    }
+    setVisibleCards(getVisibleCards());
   }, []);
 
   useEffect(() => {
-    updateVisibleCards();
     window.addEventListener('resize', updateVisibleCards);
     return () => window.removeEventListener('resize', updateVisibleCards);
   }, [updateVisibleCards]);
 
   const maxIndex = Math.max(0, SERVICES_DATA.length - visibleCards);
 
-  // Navigation handlers
   const handlePrev = useCallback(() => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : maxIndex));
   }, [maxIndex]);
@@ -192,7 +187,6 @@ export default function Service() {
     setCurrentIndex(Math.min(Math.max(0, index), maxIndex));
   };
 
-  // Auto movement effect
   useEffect(() => {
     if (isPaused || selectedService !== null) return;
 
@@ -203,7 +197,6 @@ export default function Service() {
     return () => clearInterval(timer);
   }, [handleNext, isPaused, selectedService]);
 
-  // Touch handlers
   const handleTouchStart = (e) => {
     touchStartX.current = e.targetTouches[0].clientX;
   };
@@ -226,7 +219,6 @@ export default function Service() {
   return (
     <section className="services-section section" id="services">
       <div className="container">
-        {/* Section Header */}
         <div className="section-heading">
           <span className="eyebrow">OUR EXPERTISE</span>
           <h2>Solutions Built for Modern Business Growth</h2>
@@ -235,13 +227,11 @@ export default function Service() {
           </p>
         </div>
 
-        {/* Carousel Outer Wrapper */}
         <div
           className="services-slider-container"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Controls Bar */}
           <div className="slider-controls-top">
             <div className="slider-status">
               <span className="live-badge">
@@ -282,7 +272,6 @@ export default function Service() {
             </div>
           </div>
 
-          {/* Sliding Window Track */}
           <div
             className="slider-viewport"
             onTouchStart={handleTouchStart}
@@ -342,7 +331,6 @@ export default function Service() {
             </div>
           </div>
 
-          {/* Pagination Indicators / Dots */}
           <div className="slider-dots">
             {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
               <button
@@ -357,7 +345,6 @@ export default function Service() {
         </div>
       </div>
 
-      {/* Service Detail Modal */}
       {selectedService && (
         <div className="service-modal-overlay" onClick={() => setSelectedService(null)}>
           <div className="service-modal-content" onClick={(e) => e.stopPropagation()}>

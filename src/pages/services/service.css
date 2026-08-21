@@ -10,7 +10,6 @@
   margin: 0 auto;
 }
 
-/* Services Page Hero */
 .services-hero {
   padding: 110px 0 85px;
   background: radial-gradient(circle at 75% 30%, rgba(0, 184, 232, 0.12), transparent 40%),
@@ -53,7 +52,6 @@
   gap: 16px;
 }
 
-/* Values Pillars */
 .services-values {
   background: #ffffff;
   padding: 100px 0;
@@ -141,7 +139,6 @@
   line-height: 1.7;
 }
 
-/* Services CTA */
 .services-cta {
   padding: 100px 0;
   color: #ffffff;
@@ -179,7 +176,6 @@
   line-height: 1.75;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .services-hero h1 {
     font-size: 3.2rem;

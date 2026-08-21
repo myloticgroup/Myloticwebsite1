@@ -58,7 +58,6 @@ export default function Footer() {
       <div className="footer__container">
         <div className="footer__grid">
 
-          {/* Column 1: Brand */}
           <div className="footer-brand">
             <Link to="/" className="footer-brand__logo-link">
               <div className="footer-brand__logo-badge">
@@ -111,7 +110,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
           <div className="footer-column">
             <h3 className="footer-column__title">Quick Links</h3>
             <ul className="footer-column__list">
@@ -125,7 +123,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Services */}
           <div className="footer-column">
             <h3 className="footer-column__title">Services</h3>
             <ul className="footer-column__list">
@@ -139,7 +136,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Industries */}
           <div className="footer-column">
             <h3 className="footer-column__title">Industries</h3>
             <ul className="footer-column__list">
@@ -153,7 +149,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 5: Contact */}
           <div className="footer-column">
             <h3 className="footer-column__title">Contact</h3>
             <div className="footer-contact__list">
