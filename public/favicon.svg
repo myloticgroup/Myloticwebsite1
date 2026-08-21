@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Mylotic Group</title>
+  <desc id="desc">Mylotic Group M logo</desc>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#008fe5"/>
+      <stop offset="1" stop-color="#00b8e8"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="16" y1="8" x2="48" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <path d="M32 10 54 54h-11L32 31 21 54H10L32 10Z" fill="#fff"/>
+  <path d="M32 10 54 54h-11L32 31 21 54H10L32 10Z" fill="url(#shine)"/>
+</svg>

@@ -88,8 +88,12 @@
 
   &__menu {
     display: flex;
+    flex: 1;
+    min-width: 0;
+    margin-left: clamp(0px, 10vw, 150px);
     align-items: center;
-    gap: 6px;
+    gap: clamp(10px, 1vw, 16px);
+    justify-content: space-between;
 
     padding: 8px;
 
@@ -306,7 +310,8 @@
     padding: 16px 25px;
 
     &__menu {
-      gap: 2px;
+      gap: 7px;
+      justify-content: space-between;
     }
 
     &__link {

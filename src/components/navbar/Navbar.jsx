@@ -52,10 +52,6 @@ function Navbar() {
             Training & Development
           </NavLink>
 
-          <NavLink to="/why-choose-us" className={({ isActive }) => `navbar__link${isActive ? " navbar__link--active" : ""}`}>
-            Why Choose Us
-          </NavLink>
-
           <NavLink to="/contact" className={({ isActive }) => `navbar__contact${isActive ? " navbar__contact--active" : ""}`}>
             Contact Us
           </NavLink>
