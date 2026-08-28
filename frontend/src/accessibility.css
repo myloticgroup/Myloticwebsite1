@@ -1,0 +1,24 @@
+body {
+  overflow-x: hidden;
+}
+
+.skip-link {
+  position: fixed;
+  left: 20px;
+  top: 10px;
+  z-index: 30;
+  transform: translateY(-150%);
+  background: #d6e2b7;
+  color: #18221f;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+:focus-visible {
+  outline: 3px solid #6b8054;
+  outline-offset: 3px;
+}
