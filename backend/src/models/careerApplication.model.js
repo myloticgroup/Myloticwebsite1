@@ -7,7 +7,7 @@ const careerApplicationSchema = new mongoose.Schema({
   jobTitle: { type: String, required: true },
   fullName: { type: String, required: true },
   email: { type: String, required: true, lowercase: true, index: true },
-  phone: { type: String, required: true },
+  phone: String,
   location: { type: String, required: true },
   linkedinUrl: String,
   githubUrl: String,

@@ -25,7 +25,7 @@ export function validateTalentLead(payload = {}) {
     errors.email = 'Please enter a valid email address.';
   }
 
-  if (phone && !/^[0-9+\s\-().]{7,20}$/.test(phone)) {
+  if (phone && !/^\d{7,20}$/.test(phone)) {
     errors.phone = 'Please enter a valid phone number.';
   }
 
