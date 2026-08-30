@@ -6,10 +6,18 @@ import { errorHandler } from './middleware/errorHandler.js';
 
 const app = express();
 
+const localOriginPattern = /^(https?:\/\/)?(localhost|127\.0\.0\.1|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)(:\d+)?$/;
+const allowedOrigins = Array.isArray(config.corsOrigin) ? config.corsOrigin : [config.corsOrigin];
 const corsOptions = {
-  origin: config.corsOrigin,
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin) || localOriginPattern.test(origin.replace(/^https?:\/\//, ''))) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('CORS origin not allowed.'));
+  },
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 };
 

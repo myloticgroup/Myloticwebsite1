@@ -13,8 +13,12 @@ export class AdminAuthController {
   }
 
   static async logout(req, res, next) {
-    try { await endSession(readCookie(req, 'mylotic_admin_session')); res.clearCookie('mylotic_admin_session', cookieOptions(0)); return res.json({ success: true, message: 'Signed out.' }); }
-    catch (error) { return next(error); }
+    try {
+      const token = readCookie(req, 'mylotic_admin_session');
+      if (token) await endSession(token);
+      res.clearCookie('mylotic_admin_session', { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', path: '/' });
+      return res.json({ success: true, message: 'Signed out.' });
+    } catch (error) { return next(error); }
   }
 
   static async me(req, res) { return res.json({ success: true, admin: req.admin }); }

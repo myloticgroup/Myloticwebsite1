@@ -1,13 +1,30 @@
 const API_URL = (import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api')).replace(/\/$/, '');
 
 async function request(path, options = {}) {
-  const response = await fetch(`${API_URL}${path}`, { credentials: 'include', ...options });
-  const result = await response.json().catch(() => ({}));
+  let response;
+  try {
+    response = await fetch(`${API_URL}${path}`, { credentials: 'include', ...options });
+  } catch (error) {
+    const networkError = new Error('Unable to reach the admin API. Check that the backend is running and the CORS origin is configured correctly.');
+    networkError.cause = error;
+    throw networkError;
+  }
+
+  let result = {};
+  const contentType = response.headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    result = await response.json().catch(() => ({}));
+  } else if (response.status !== 204) {
+    result = { message: await response.text().catch(() => 'Request failed.') };
+  }
+
   if (!response.ok || result.success === false) {
     const error = new Error(result.message || 'Something went wrong. Please try again.');
     error.fields = result.errors || {};
+    error.status = response.status;
     throw error;
   }
+
   return result;
 }
 
